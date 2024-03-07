@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Sistema de Imigrantes</h1>
+    Você é 'Eua' ou 'BR'? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="nac">
+
+    </div>
+    <script>
+        function calcular(){
+            var nasc = window.document.querySelector('input#txtnac')
+            var nac = window.document.querySelector('div#nac')
+            var mos = String(txtnac.value)
+            nac.innerHTML = `<p>Sua nacionalidade é <strong>${mos}!</strong></p>`
+            if (mos == 'Eua'){
+                nac.innerHTML += `<p>Você é <strong>Americano!</strong></p>`
+            } else {
+                nac.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
